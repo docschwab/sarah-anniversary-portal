@@ -411,22 +411,25 @@
     function render(data){
       const level = computeEffectiveLevel(data, 9);
       const progress = clamp(Number(data.progress_by_level?.[String(level)] ?? 12), 1, 100);
+      const sched = data.reveal_schedule || {};
 
       // Header / status
       document.getElementById("caseId").textContent = data.case_id || "ANNIV-25-SARAH";
       document.getElementById("dateWindow").textContent = data.date_window || "Aug 23 – Sep 3, 2026";
       document.getElementById("dates").textContent = data.date_window || "Aug 23 – Sep 3, 2026";
       document.getElementById("buildVersion").textContent = data.build_version || "v1.0";
-      document.getElementById("lastUpdated").textContent = data.last_updated || "—";
       document.getElementById("progressFill").style.width = progress + "%";
       document.getElementById("progressText").textContent = progress + "%";
+
+      // "Updated" should reflect the scheduled release date for the *effective* level
+      const updatedISO = sched[String(level)] || data.last_updated || "—";
+      document.getElementById("lastUpdated").textContent = updatedISO;
 
       // Regions / ops (progressively revealed)
       document.getElementById("regions").textContent = (data.regions_by_level?.[String(level)] || "[REDACTED]");
       document.getElementById("ops").textContent = (data.ops_by_level?.[String(level)] || "Recovery in progress…");
 
       // Next scheduled recovery
-      const sched = data.reveal_schedule || {};
       let nextISO = null;
       for (let lvl = level + 1; lvl <= 9; lvl++) {
         if (sched[String(lvl)]) { nextISO = sched[String(lvl)]; break; }
