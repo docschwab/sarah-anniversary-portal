@@ -75,10 +75,16 @@
   },
 
   "sms_copy_by_level": {
-    "0": "📡 Briefing Portal Update: New information recovered (still partially redacted).",
-    "3": "📡 Briefing Portal Update: More of the story just came back online.",
-    "6": "📡 Briefing Portal Update: A major chunk of the itinerary has been restored.",
-    "9": "📡 Briefing Portal Update: The surprise is (almost) fully recovered."
+    "0": "📡 25th Anniversary Adventure Briefing Portal Update: New information recovered (still partially redacted). Check the portal: https://docschwab.github.io/sarah-anniversary-portal/",
+    "1": "📡 25th Anniversary Adventure Briefing Portal Update: A few more fragments have resurfaced. Check the portal: https://docschwab.github.io/sarah-anniversary-portal/",
+    "2": "📡 25th Anniversary Adventure Briefing Portal Update: Recovery continues — still under strict redaction rules. Check the portal: https://docschwab.github.io/sarah-anniversary-portal/",
+    "3": "📡 25th Anniversary Adventure Briefing Portal Update: More of the story just came back online. Check the portal: https://docschwab.github.io/sarah-anniversary-portal/",
+    "4": "📡 25th Anniversary Adventure Briefing Portal Update: New clues recovered. No spoilers (yet). Check the portal: https://docschwab.github.io/sarah-anniversary-portal/",
+    "5": "📡 25th Anniversary Adventure Briefing Portal Update: Significant progress… and deliberate omissions. Check the portal: https://docschwab.github.io/sarah-anniversary-portal/",
+    "6": "📡 25th Anniversary Adventure Briefing Portal Update: A major chunk of the itinerary has been restored. Check the portal: https://docschwab.github.io/sarah-anniversary-portal/",
+    "7": "📡 25th Anniversary Adventure Briefing Portal Update: Almost everything is operational — one key reveal remains sealed. Check the portal: https://docschwab.github.io/sarah-anniversary-portal/",
+    "8": "📡 25th Anniversary Adventure Briefing Portal Update: Final clarity is imminent. Check the portal: https://docschwab.github.io/sarah-anniversary-portal/",
+    "9": "📡 25th Anniversary Adventure Briefing Portal Update: Recovery complete. It’s time to go. Check the portal: https://docschwab.github.io/sarah-anniversary-portal/"
   },
 
   "teasers": [
@@ -105,7 +111,7 @@
       "5": "An adventure built around contrast: exploration, intention, and [REDACTED].",
       "6": "An adventure built around contrast: wild places, quiet comfort, and [REDACTED].",
       "7": "An adventure built around contrast: iconic landscapes and [REDACTED].",
-      "8": "An adventure built around contrast: one of the world’s great natural journeys.",
+      "8": "An adventure built around contrast: one of the world’s great natural adventures.",
       "9": "An adventure built around contrast: safari immersion, conservation landscapes, and the Indian Ocean coast."
     }
   },
