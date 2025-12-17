@@ -378,6 +378,33 @@
 
     function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
 
+    function parseLocalISODate(iso) {
+      // "YYYY-MM-DD" -> local midnight
+      const [y, m, d] = String(iso).split("-").map(Number);
+      return new Date(y, (m || 1) - 1, d || 1, 0, 0, 0, 0);
+    }
+
+    function computeEffectiveLevel(data, maxLevel = 9) {
+      // Force override wins
+      if (data.force_reveal_level !== null && data.force_reveal_level !== undefined) {
+        const forced = Number(data.force_reveal_level);
+        if (!Number.isNaN(forced)) return clamp(forced, 0, maxLevel);
+      }
+
+      const sched = data.reveal_schedule || {};
+      const today = new Date();
+      today.setHours(0, 0, 0, 0); // local midnight
+
+      let best = 0;
+      for (let lvl = 0; lvl <= maxLevel; lvl++) {
+        const iso = sched[String(lvl)];
+        if (!iso) continue;
+        const dt = parseLocalISODate(iso);
+        if (dt <= today) best = lvl;
+      }
+      return best;
+    }
+
     function render(data){
       const level = clamp(Number(data.reveal_level ?? 0), 0, 9);
       const progress = clamp(Number(data.progress_by_level?.[String(level)] ?? 12), 1, 100);
