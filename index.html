@@ -282,9 +282,9 @@
         </p>
 
         <div class="pillRow">
-          <div class="pill">Case: <strong id="caseId">AHF-25-SARAH</strong></div>
-          <div class="pill">Location: <strong>Kenya</strong></div>
-          <div class="pill">Time Window: <strong id="dateWindow">Aug 24 – Sep 3, 2026</strong></div>
+          <div class="pill">Case: <strong id="caseId">ANNIV-25-SARAH</strong></div>
+          <div class="pill">Location: <strong>[REDACTED]</strong></div>
+          <div class="pill">Time Window: <strong id="dateWindow">Aug 23 – Sep 3, 2026</strong></div>
         </div>
       </div>
 
@@ -317,7 +317,7 @@
     <main>
       <section class="card">
         <h2>Core Facts</h2>
-        <p class="big" id="headline">A 25th anniversary journey, partially recovered.</p>
+        <p class="big" id="headline">A 25th anniversary adventure, partially recovered.</p>
         <p class="muted" id="subline">
           Dates are stable. The rest is being gently restored as the system allows.
         </p>
@@ -330,7 +330,7 @@
           <div class="v">25th Anniversary</div>
 
           <div class="k">Dates</div>
-          <div class="v" id="dates">Aug 24 – Sep 3, 2026</div>
+          <div class="v" id="dates">Aug 23 – Sep 3, 2026</div>
 
           <div class="k">Region(s)</div>
           <div class="v" id="regions">[REDACTED]</div>
@@ -340,7 +340,7 @@
         </div>
 
         <div class="hint" id="romanticNote">
-          <strong>Note:</strong> The details are intentionally returning slowly. Some surprises deserve to unfold like a story.
+          <strong>Note:</strong> A small glitch occurred while assembling your surprise. Information will reappear as it’s recovered — one piece at a time.
         </div>
       </section>
 
@@ -383,9 +383,9 @@
       const progress = clamp(Number(data.progress_by_level?.[String(level)] ?? 12), 1, 100);
 
       // Header / status
-      document.getElementById("caseId").textContent = data.case_id || "AHF-25-SARAH";
-      document.getElementById("dateWindow").textContent = data.date_window || "Aug 24 – Sep 3, 2026";
-      document.getElementById("dates").textContent = data.date_window || "Aug 24 – Sep 3, 2026";
+      document.getElementById("caseId").textContent = data.case_id || "ANNIV-25-SARAH";
+      document.getElementById("dateWindow").textContent = data.date_window || "Aug 23 – Sep 3, 2026";
+      document.getElementById("dates").textContent = data.date_window || "Aug 23 – Sep 3, 2026";
       document.getElementById("buildVersion").textContent = data.build_version || "v1.0";
       document.getElementById("lastUpdated").textContent = data.last_updated || "—";
       document.getElementById("progressFill").style.width = progress + "%";
@@ -396,7 +396,7 @@
       document.getElementById("ops").textContent = (data.ops_by_level?.[String(level)] || "Recovery in progress…");
 
       // Copy blocks
-      document.getElementById("headline").textContent = data.headline_by_level?.[String(level)] || "A 25th anniversary journey, partially recovered.";
+      document.getElementById("headline").textContent = data.headline_by_level?.[String(level)] || "A 25th anniversary adventure, partially recovered.";
       document.getElementById("subline").textContent = data.subline_by_level?.[String(level)] || "Dates are stable. The rest is being gently restored as the system allows.";
 
       // Badge logic
