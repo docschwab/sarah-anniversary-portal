@@ -63,106 +63,167 @@
   },
 
   "teasers": [
-    {
-      "title": "Teaser 01 — The moment",
-      "tag_by_level": {
-        "0": "corrupted",
-        "1": "partial restore",
-        "2": "improving",
-        "3": "stable",
-        "4": "stable",
-        "5": "stable",
-        "6": "restored"
-      },
-      "text_by_level": {
-        "0": "Witness [REDACTED].",
-        "1": "Witness the [REDACTED] of the Great [REDACTED].",
-        "2": "Witness the [REDACTED] of the Great [REDACTED] up close and in person.",
-        "3": "Witness the majesty of the Great [REDACTED] up close and in person.",
-        "4": "Witness the majesty of the Great Migration up close and in person.",
-        "6": "Witness the majesty of the Great Migration up close and in person."
-      }
+  {
+    "title": "Teaser 01 — The shape of the adventure",
+    "tag_by_level": {
+      "0": "missing",
+      "1": "partial",
+      "2": "partial",
+      "3": "partial",
+      "4": "partial",
+      "5": "partial",
+      "6": "improving",
+      "7": "nearly there",
+      "8": "clear",
+      "9": "restored"
     },
-    {
-      "title": "Teaser 02 — How you’ll move",
-      "tag_by_level": {
-        "0": "missing",
-        "1": "partial",
-        "2": "partial",
-        "3": "stable",
-        "4": "restored",
-        "5": "restored",
-        "6": "restored"
-      },
-      "text_by_level": {
-        "0": "Travel method: [REDACTED].",
-        "1": "Travel method: regional flights (aircraft details [REDACTED]).",
-        "2": "Travel method: regional flights on small aircraft (details [REDACTED]).",
-        "3": "Travel method: regional flights on small aircraft — scenic and special.",
-        "4": "Travel method: regional flights on small aircraft (Cessna-style).",
-        "6": "Travel method: regional flights on small aircraft (Cessna-style)."
-      }
-    },
-    {
-      "title": "Teaser 03 — The coastline",
-      "tag_by_level": {
-        "0": "redacted",
-        "1": "partial",
-        "2": "partial",
-        "3": "improving",
-        "4": "stable",
-        "5": "restored",
-        "6": "restored"
-      },
-      "text_by_level": {
-        "0": "Recover at [REDACTED].",
-        "1": "Recover at a [REDACTED] lodge on the [REDACTED] coast.",
-        "2": "Recover at an intimate beach lodge on the Kenyan coast.",
-        "3": "Recover at an intimate beach lodge near [REDACTED].",
-        "4": "Recover at an intimate beach lodge near Diani Beach.",
-        "5": "Recover at an intimate beach lodge in Diani (Kinondo Kwetu).",
-        "6": "Recover at Kinondo Kwetu — a beach lodge that feels like a safari camp by the sea."
-      }
-    },
-    {
-      "title": "Teaser 04 — Water & wonder",
-      "tag_by_level": {
-        "0": "missing",
-        "1": "partial",
-        "2": "improving",
-        "3": "stable",
-        "4": "stable",
-        "5": "restored",
-        "6": "restored"
-      },
-      "text_by_level": {
-        "0": "Coastal activity: [REDACTED].",
-        "1": "Coastal activity: a [REDACTED] trip with [REDACTED].",
-        "2": "Coastal activity: a dhow trip with snorkelling (subject to weather).",
-        "3": "Coastal activity: a dhow trip with snorkelling (easy to book on site).",
-        "5": "Coastal activity: a dhow trip + snorkelling (booked once you arrive).",
-        "6": "Coastal activity: a dhow trip + snorkelling (booked once you arrive)."
-      }
-    },
-    {
-      "title": "Teaser 05 — The “soft stuff”",
-      "tag_by_level": {
-        "0": "secured",
-        "1": "secured",
-        "2": "partial",
-        "3": "stable",
-        "4": "stable",
-        "5": "restored",
-        "6": "restored"
-      },
-      "text_by_level": {
-        "0": "Wellness: [REDACTED].",
-        "1": "Wellness: [REDACTED] + [REDACTED] (details protected).",
-        "2": "Wellness: yoga + massage (availability varies by location).",
-        "3": "Wellness: yoga + massage + time to truly exhale.",
-        "5": "Wellness: yoga + massage + spa time (built into the plan).",
-        "6": "Wellness: yoga + massage + spa time (built into the plan)."
-      }
+    "text_by_level": {
+      "0": "An adventure built around [REDACTED].",
+      "1": "An adventure built around contrast: [REDACTED] → [REDACTED] → [REDACTED].",
+      "2": "An adventure built around contrast: immersion → [REDACTED] → rest.",
+      "3": "An adventure built around contrast: deep focus, wide space, and [REDACTED].",
+      "4": "An adventure built around contrast: movement, stillness, and [REDACTED].",
+      "5": "An adventure built around contrast: exploration, intention, and [REDACTED].",
+      "6": "An adventure built around contrast: wild places, quiet comfort, and [REDACTED].",
+      "7": "An adventure built around contrast: iconic landscapes and [REDACTED].",
+      "8": "An adventure built around contrast: one of the world’s great natural journeys.",
+      "9": "An adventure built around contrast: safari immersion, conservation landscapes, and the Indian Ocean coast."
     }
-  ]
+  },
+  {
+    "title": "Teaser 02 — How you’ll move",
+    "tag_by_level": {
+      "0": "secured",
+      "1": "secured",
+      "2": "partial",
+      "3": "partial",
+      "4": "partial",
+      "5": "partial",
+      "6": "improving",
+      "7": "nearly there",
+      "8": "clear",
+      "9": "restored"
+    },
+    "text_by_level": {
+      "0": "Transportation details: [REDACTED].",
+      "1": "Transportation details: multiple legs, intentionally [REDACTED].",
+      "2": "Transportation details: short flights connecting very different [REDACTED].",
+      "3": "Transportation details: small aircraft, big [REDACTED].",
+      "4": "Transportation details: travel designed to be part of the [REDACTED].",
+      "5": "Transportation details: movement that reveals scale and [REDACTED].",
+      "6": "Transportation details: small regional flights with unforgettable [REDACTED].",
+      "7": "Transportation details: intimate flights between remote places — names [REDACTED].",
+      "8": "Transportation details: scenic regional flights linking dramatically different regions.",
+      "9": "Transportation details: scenic regional flights linking Nairobi, the Maasai Mara, Borana, and the Indian Ocean coast."
+    }
+  },
+  {
+    "title": "Teaser 03 — The first immersion",
+    "tag_by_level": {
+      "0": "corrupted",
+      "1": "partial",
+      "2": "partial",
+      "3": "partial",
+      "4": "partial",
+      "5": "partial",
+      "6": "improving",
+      "7": "nearly there",
+      "8": "clear",
+      "9": "restored"
+    },
+    "text_by_level": {
+      "0": "The first setting: [REDACTED].",
+      "1": "The first setting: remote, quiet, and intentionally [REDACTED].",
+      "2": "The first setting: a place where attention sharpens and [REDACTED].",
+      "3": "The first setting: a landscape meant to be observed, not [REDACTED].",
+      "4": "The first setting: mornings and evenings matter more than [REDACTED].",
+      "5": "The first setting: a vast place where stillness reveals [REDACTED].",
+      "6": "The first setting: a protected wilderness known for scale and [REDACTED].",
+      "7": "The first setting: one of the world’s great wildlife regions — name [REDACTED].",
+      "8": "The first setting: a legendary wildlife landscape at its most dramatic.",
+      "9": "The first setting: the Maasai Mara during the Great Migration."
+    }
+  },
+  {
+    "title": "Teaser 04 — The middle chapter",
+    "tag_by_level": {
+      "0": "missing",
+      "1": "partial",
+      "2": "partial",
+      "3": "partial",
+      "4": "partial",
+      "5": "partial",
+      "6": "improving",
+      "7": "nearly there",
+      "8": "clear",
+      "9": "restored"
+    },
+    "text_by_level": {
+      "0": "The middle chapter: [REDACTED].",
+      "1": "The middle chapter: quieter, slower, and more [REDACTED].",
+      "2": "The middle chapter: a place where walking replaces [REDACTED].",
+      "3": "The middle chapter: guided movement, open views, and [REDACTED].",
+      "4": "The middle chapter: a private landscape shaped by purpose and [REDACTED].",
+      "5": "The middle chapter: a place defined by protection, balance, and [REDACTED].",
+      "6": "The middle chapter: a conservation-focused retreat with deep [REDACTED].",
+      "7": "The middle chapter: a globally respected conservation area — name [REDACTED].",
+      "8": "The middle chapter: a renowned conservation landscape emphasizing walking and connection.",
+      "9": "The middle chapter: Borana Conservancy — walking safaris, conservation, and space to breathe."
+    }
+  },
+  {
+    "title": "Teaser 05 — The water",
+    "tag_by_level": {
+      "0": "secured",
+      "1": "partial",
+      "2": "partial",
+      "3": "partial",
+      "4": "partial",
+      "5": "partial",
+      "6": "improving",
+      "7": "nearly there",
+      "8": "clear",
+      "9": "restored"
+    },
+    "text_by_level": {
+      "0": "The final setting: [REDACTED].",
+      "1": "The final setting: light, warmth, and [REDACTED].",
+      "2": "The final setting: unstructured days and [REDACTED] water.",
+      "3": "The final setting: swimming, boats, and [REDACTED].",
+      "4": "The final setting: a shoreline designed for slowing down and [REDACTED].",
+      "5": "The final setting: a quiet coast far from crowds, names [REDACTED].",
+      "6": "The final setting: an intimate beach retreat with long meals and sea air.",
+      "7": "The final setting: a celebrated beach hideaway — exact location [REDACTED].",
+      "8": "The final setting: a beloved lodge on a warm ocean coast.",
+      "9": "The final setting: Kinondo Kwetu on Kenya’s Indian Ocean coast."
+    }
+  },
+  {
+    "title": "Teaser 06 — The soft stuff",
+    "tag_by_level": {
+      "0": "protected",
+      "1": "protected",
+      "2": "partial",
+      "3": "partial",
+      "4": "partial",
+      "5": "partial",
+      "6": "improving",
+      "7": "nearly there",
+      "8": "clear",
+      "9": "restored"
+    },
+    "text_by_level": {
+      "0": "Wellness details: [REDACTED].",
+      "1": "Wellness details: intentional pauses built [REDACTED].",
+      "2": "Wellness details: yoga, massage, and [REDACTED].",
+      "3": "Wellness details: yoga, massage, and movement [REDACTED].",
+      "4": "Wellness details: wellness woven into the rhythm of [REDACTED].",
+      "5": "Wellness details: care, movement, and rest — specifics [REDACTED].",
+      "6": "Wellness details: yoga, massage, walking, and time to truly [REDACTED].",
+      "7": "Wellness details: daily rituals for body and mind — location [REDACTED].",
+      "8": "Wellness details: yoga, massage, walks, and unhurried days.",
+      "9": "Wellness details: yoga, massage, walks, horseback riding, and beach time."
+    }
+  }
+]
 }
