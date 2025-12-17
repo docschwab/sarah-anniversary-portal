@@ -1,0 +1,168 @@
+{
+  "case_id": "AHF-25-SARAH",
+  "build_version": "v1.0",
+  "date_window": "Aug 24 – Sep 3, 2026",
+  "last_updated": "Dec 17, 2025",
+  "reveal_level": 0,
+
+  "progress_by_level": {
+    "0": 12,
+    "1": 18,
+    "2": 28,
+    "3": 46,
+    "4": 62,
+    "5": 78,
+    "6": 92
+  },
+
+  "story_by_level": {
+    "0": "A small technical error occurred while assembling your surprise. Some details were lost in transit — not because they aren’t real, but because they’re arriving in phases. Check back occasionally. Each visit may recover a little more of the story.",
+    "3": "The system is recovering memories slowly — like a photo coming into focus. The most important part is already certain: we’re going together.",
+    "6": "Recovered: the story is real, and it’s yours. (The only remaining redaction is how excited I am.)"
+  },
+
+  "headline_by_level": {
+    "0": "A 25th anniversary journey, partially recovered.",
+    "2": "A 25th anniversary journey — details resurfacing.",
+    "4": "A 25th anniversary journey — the story is taking shape.",
+    "6": "A 25th anniversary journey — restored."
+  },
+
+  "subline_by_level": {
+    "0": "Dates are stable. The rest is being gently restored as the system allows.",
+    "2": "Some details have returned. Others remain intentionally protected.",
+    "4": "Most systems are functional. Surprise integrity remains high.",
+    "6": "Core itinerary recovered. Surprise integrity: happily compromised."
+  },
+
+  "regions_by_level": {
+    "0": "[REDACTED]",
+    "1": "Kenya: [REDACTED] + [REDACTED] + Coast",
+    "2": "Kenya: Maasai Mara + [REDACTED] + Coast",
+    "3": "Kenya: Maasai Mara + Northern Conservancy + Coast",
+    "4": "Kenya: Maasai Mara + Borana Conservancy + Coast",
+    "5": "Kenya: Maasai Mara + Borana Conservancy + Diani Coast",
+    "6": "Kenya: Maasai Mara + Borana Conservancy + Diani (Kinondo Kwetu)"
+  },
+
+  "ops_by_level": {
+    "0": "Recovery in progress…",
+    "1": "Two safari locations + beach decompression (approx.)",
+    "2": "Safari + walking + wellness + beach",
+    "3": "Private conservancy time + iconic wildlife region + coast",
+    "4": "Small regional flights included (scenic!)",
+    "5": "Most logistical details restored.",
+    "6": "Full itinerary restored (final redactions optional)."
+  },
+
+  "sms_copy_by_level": {
+    "0": "📡 Briefing Portal Update: New information recovered (still partially redacted).",
+    "2": "📡 Briefing Portal Update: More of the story just came back online.",
+    "4": "📡 Briefing Portal Update: A major chunk of the itinerary has been restored.",
+    "6": "📡 Briefing Portal Update: The surprise is (almost) fully recovered."
+  },
+
+  "teasers": [
+    {
+      "title": "Teaser 01 — The moment",
+      "tag_by_level": {
+        "0": "corrupted",
+        "1": "partial restore",
+        "2": "improving",
+        "3": "stable",
+        "4": "stable",
+        "5": "stable",
+        "6": "restored"
+      },
+      "text_by_level": {
+        "0": "Witness [REDACTED].",
+        "1": "Witness the [REDACTED] of the Great [REDACTED].",
+        "2": "Witness the [REDACTED] of the Great [REDACTED] up close and in person.",
+        "3": "Witness the majesty of the Great [REDACTED] up close and in person.",
+        "4": "Witness the majesty of the Great Migration up close and in person.",
+        "6": "Witness the majesty of the Great Migration up close and in person."
+      }
+    },
+    {
+      "title": "Teaser 02 — How you’ll move",
+      "tag_by_level": {
+        "0": "missing",
+        "1": "partial",
+        "2": "partial",
+        "3": "stable",
+        "4": "restored",
+        "5": "restored",
+        "6": "restored"
+      },
+      "text_by_level": {
+        "0": "Travel method: [REDACTED].",
+        "1": "Travel method: regional flights (aircraft details [REDACTED]).",
+        "2": "Travel method: regional flights on small aircraft (details [REDACTED]).",
+        "3": "Travel method: regional flights on small aircraft — scenic and special.",
+        "4": "Travel method: regional flights on small aircraft (Cessna-style).",
+        "6": "Travel method: regional flights on small aircraft (Cessna-style)."
+      }
+    },
+    {
+      "title": "Teaser 03 — The coastline",
+      "tag_by_level": {
+        "0": "redacted",
+        "1": "partial",
+        "2": "partial",
+        "3": "improving",
+        "4": "stable",
+        "5": "restored",
+        "6": "restored"
+      },
+      "text_by_level": {
+        "0": "Recover at [REDACTED].",
+        "1": "Recover at a [REDACTED] lodge on the [REDACTED] coast.",
+        "2": "Recover at an intimate beach lodge on the Kenyan coast.",
+        "3": "Recover at an intimate beach lodge near [REDACTED].",
+        "4": "Recover at an intimate beach lodge near Diani Beach.",
+        "5": "Recover at an intimate beach lodge in Diani (Kinondo Kwetu).",
+        "6": "Recover at Kinondo Kwetu — a beach lodge that feels like a safari camp by the sea."
+      }
+    },
+    {
+      "title": "Teaser 04 — Water & wonder",
+      "tag_by_level": {
+        "0": "missing",
+        "1": "partial",
+        "2": "improving",
+        "3": "stable",
+        "4": "stable",
+        "5": "restored",
+        "6": "restored"
+      },
+      "text_by_level": {
+        "0": "Coastal activity: [REDACTED].",
+        "1": "Coastal activity: a [REDACTED] trip with [REDACTED].",
+        "2": "Coastal activity: a dhow trip with snorkelling (subject to weather).",
+        "3": "Coastal activity: a dhow trip with snorkelling (easy to book on site).",
+        "5": "Coastal activity: a dhow trip + snorkelling (booked once you arrive).",
+        "6": "Coastal activity: a dhow trip + snorkelling (booked once you arrive)."
+      }
+    },
+    {
+      "title": "Teaser 05 — The “soft stuff”",
+      "tag_by_level": {
+        "0": "secured",
+        "1": "secured",
+        "2": "partial",
+        "3": "stable",
+        "4": "stable",
+        "5": "restored",
+        "6": "restored"
+      },
+      "text_by_level": {
+        "0": "Wellness: [REDACTED].",
+        "1": "Wellness: [REDACTED] + [REDACTED] (details protected).",
+        "2": "Wellness: yoga + massage (availability varies by location).",
+        "3": "Wellness: yoga + massage + time to truly exhale.",
+        "5": "Wellness: yoga + massage + spa time (built into the plan).",
+        "6": "Wellness: yoga + massage + spa time (built into the plan)."
+      }
+    }
+  ]
+}
