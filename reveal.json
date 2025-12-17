@@ -35,7 +35,7 @@
     "0": "A 25th anniversary adventure - data integrity severely corrupted.",
     "3": "A 25th anniversary adventure — data integrity restoration begun.",
     "6": "A 25th anniversary adventure — data integrity restoration progressing.",
-    "6": "A 25th anniversary adventure — restored."
+    "9": "A 25th anniversary adventure — restored."
   },
 
   "subline_by_level": {
@@ -47,29 +47,25 @@
 
   "regions_by_level": {
     "0": "[REDACTED]",
-    "1": "Kenya: [REDACTED] + [REDACTED] + Coast",
-    "2": "Kenya: Maasai Mara + [REDACTED] + Coast",
-    "3": "Kenya: Maasai Mara + Northern Conservancy + Coast",
-    "4": "Kenya: Maasai Mara + Borana Conservancy + Coast",
-    "5": "Kenya: Maasai Mara + Borana Conservancy + Diani Coast",
-    "6": "Kenya: Maasai Mara + Borana Conservancy + Diani (Kinondo Kwetu)"
+    "3": "Earth: [REDACTED] + [REDACTED]",
+    "6": "Earth: Country of [REDACTED] + [REDACTED] Coast",
+    "9": "Kenya: Maasai Mara + Northern Conservancy + Indian Ocean Coast"
   },
 
   "ops_by_level": {
     "0": "Recovery in progress…",
-    "1": "Two safari locations + beach decompression (approx.)",
-    "2": "Safari + walking + wellness + beach",
-    "3": "Private conservancy time + iconic wildlife region + coast",
-    "4": "Small regional flights included (scenic!)",
-    "5": "Most logistical details restored.",
-    "6": "Full itinerary restored (final redactions optional)."
+    "2": "Two (possible?) locations + beach decompression (approx.)",
+    "4": "Hiking + wellness + beach",
+    "6": "Private [REDACTED] time + iconic [REDACTED] + coast",
+    "8": "Small regional flights included",
+    "9": "Full itinerary restored (final redactions optional)."
   },
 
   "sms_copy_by_level": {
     "0": "📡 Briefing Portal Update: New information recovered (still partially redacted).",
-    "2": "📡 Briefing Portal Update: More of the story just came back online.",
-    "4": "📡 Briefing Portal Update: A major chunk of the itinerary has been restored.",
-    "6": "📡 Briefing Portal Update: The surprise is (almost) fully recovered."
+    "3": "📡 Briefing Portal Update: More of the story just came back online.",
+    "6": "📡 Briefing Portal Update: A major chunk of the itinerary has been restored.",
+    "9": "📡 Briefing Portal Update: The surprise is (almost) fully recovered."
   },
 
   "teasers": [
