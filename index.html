@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anniversary Briefing Portal</title>
+  <meta name="description" content="A small technical error occurred while assembling your surprise. Information will return in phases." />
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#101826;
+      --card2:#0f1622;
+      --text:#e7eefc;
+      --muted:#a9b4c7;
+      --accent:#8bd3ff;
+      --accent2:#ffd6a5;
+      --danger:#ff6b6b;
+      --ok:#7dffb2;
+      --line:rgba(255,255,255,.09);
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: var(--sans);
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(139,211,255,.14), transparent 55%),
+        radial-gradient(900px 600px at 85% 15%, rgba(255,214,165,.10), transparent 50%),
+        radial-gradient(900px 700px at 50% 90%, rgba(125,255,178,.06), transparent 55%),
+        var(--bg);
+      color: var(--text);
+    }
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+    header{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:flex-start;
+      margin-bottom: 18px;
+    }
+    .title{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    h1{
+      margin:0;
+      font-size: 22px;
+      letter-spacing:.3px;
+    }
+    .sub{
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.35;
+      max-width: 62ch;
+    }
+    .pillRow{
+      display:flex;
+      gap:10px;
+      flex-wrap: wrap;
+      margin-top: 2px;
+      align-items:center;
+    }
+    .pill{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+    .pill strong{ color: var(--text); font-weight:600; }
+    .status{
+      min-width: 270px;
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border-radius: var(--radius);
+      padding: 14px 14px 12px;
+      box-shadow: var(--shadow);
+    }
+    .statusTop{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom: 10px;
+    }
+    .statusTitle{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .badge{
+      font-family: var(--mono);
+      font-size: 12px;
+      border-radius: 999px;
+      padding: 6px 10px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      white-space:nowrap;
+    }
+    .badge.degraded{ color: var(--danger); border-color: rgba(255,107,107,.35); background: rgba(255,107,107,.06); }
+    .badge.recovering{ color: var(--accent); border-color: rgba(139,211,255,.35); background: rgba(139,211,255,.06); }
+    .badge.stable{ color: var(--ok); border-color: rgba(125,255,178,.35); background: rgba(125,255,178,.06); }
+
+    .bar{
+      width:100%;
+      height: 10px;
+      background: rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      border-radius: 999px;
+      overflow:hidden;
+    }
+    .bar > div{
+      height: 100%;
+      width: 12%;
+      background: linear-gradient(90deg, rgba(139,211,255,.9), rgba(255,214,165,.85));
+      border-radius: 999px;
+      transition: width .45s ease;
+    }
+    .statusMeta{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    main{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    @media (max-width: 900px){
+      header{ flex-direction:column; }
+      .status{ width:100%; }
+      main{ grid-template-columns: 1fr; }
+    }
+    .card{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    .card h2{
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing:.3px;
+      font-family: var(--mono);
+      text-transform: uppercase;
+    }
+    .big{
+      font-size: 18px;
+      line-height: 1.25;
+      margin: 0 0 8px;
+    }
+    .muted{
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0;
+      font-size: 14px;
+    }
+    .kv{
+      display:grid;
+      grid-template-columns: 140px 1fr;
+      gap: 10px 14px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+    .k{ color: var(--muted); }
+    .v{ color: var(--text); }
+    .teasers{
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .teaser{
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.12);
+      border-radius: 14px;
+      padding: 12px 12px;
+    }
+    .teaser .label{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .teaser .text{
+      font-size: 15px;
+      line-height: 1.45;
+      margin: 0;
+    }
+    .footer{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      font-family: var(--mono);
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:10px;
+      opacity:.9;
+    }
+    .hint{
+      margin-top: 10px;
+      border-top:1px dashed rgba(255,255,255,.14);
+      padding-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .smallBtn{
+      margin-top: 10px;
+      display:inline-block;
+      font-family: var(--mono);
+      font-size: 12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding: 8px 10px;
+      border-radius: 12px;
+      color: var(--muted);
+      cursor: pointer;
+      user-select:none;
+    }
+    .smallBtn:hover{ color: var(--text); border-color: rgba(255,255,255,.18); }
+    .toast{
+      position: fixed;
+      left: 50%;
+      bottom: 16px;
+      transform: translateX(-50%);
+      background: rgba(16,24,38,.92);
+      border:1px solid rgba(255,255,255,.14);
+      padding: 10px 12px;
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 12px;
+      opacity: 0;
+      pointer-events:none;
+      transition: opacity .25s ease, transform .25s ease;
+    }
+    .toast.show{
+      opacity: 1;
+      transform: translateX(-50%) translateY(-4px);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1>Anniversary Briefing Portal</h1>
+        <p class="sub" id="story">
+          A small technical error occurred while assembling your surprise.
+          Some details were lost in transit — not because they aren’t real, but because they’re arriving in phases.
+          Check back occasionally. Each visit may recover a little more of the story.
+        </p>
+
+        <div class="pillRow">
+          <div class="pill">Case: <strong id="caseId">AHF-25-SARAH</strong></div>
+          <div class="pill">Location: <strong>Kenya</strong></div>
+          <div class="pill">Time Window: <strong id="dateWindow">Aug 24 – Sep 3, 2026</strong></div>
+        </div>
+      </div>
+
+      <aside class="status">
+        <div class="statusTop">
+          <div>
+            <div class="statusTitle">SYSTEM STATUS</div>
+            <div class="badge degraded" id="statusBadge">DEGRADED</div>
+          </div>
+          <div class="badge recovering" id="revealBadge">RECOVERY IN PROGRESS</div>
+        </div>
+
+        <div class="bar" aria-label="Recovery progress">
+          <div id="progressFill"></div>
+        </div>
+
+        <div class="statusMeta">
+          <div>Recovery: <span id="progressText">12%</span></div>
+          <div>Updated: <span id="lastUpdated">—</span></div>
+        </div>
+
+        <div class="hint" id="hintText">
+          If you’re seeing lots of █████, it’s not you — it’s the surprise trying to stay a surprise.
+        </div>
+
+        <div class="smallBtn" id="copyBtn">Copy “Update Posted” Text</div>
+      </aside>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Core Facts</h2>
+        <p class="big" id="headline">A 25th anniversary journey, partially recovered.</p>
+        <p class="muted" id="subline">
+          Dates are stable. The rest is being gently restored as the system allows.
+        </p>
+
+        <div class="kv">
+          <div class="k">Traveler</div>
+          <div class="v">Sarah</div>
+
+          <div class="k">Occasion</div>
+          <div class="v">25th Anniversary</div>
+
+          <div class="k">Dates</div>
+          <div class="v" id="dates">Aug 24 – Sep 3, 2026</div>
+
+          <div class="k">Region(s)</div>
+          <div class="v" id="regions">[REDACTED]</div>
+
+          <div class="k">Operations</div>
+          <div class="v" id="ops">Recovery in progress…</div>
+        </div>
+
+        <div class="hint" id="romanticNote">
+          <strong>Note:</strong> The details are intentionally returning slowly. Some surprises deserve to unfold like a story.
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2>Itinerary Teasers</h2>
+        <div class="teasers" id="teaserList">
+          <!-- filled by JS -->
+        </div>
+
+        <div class="footer">
+          <div>Portal build: <span id="buildVersion">—</span></div>
+          <div>Integrity check: <span id="integrity">pending</span></div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <div class="toast" id="toast">Copied.</div>
+
+  <script>
+    const toast = (msg) => {
+      const el = document.getElementById("toast");
+      el.textContent = msg || "Copied.";
+      el.classList.add("show");
+      setTimeout(() => el.classList.remove("show"), 1600);
+    };
+
+    async function loadReveal() {
+      // cache-bust so GitHub pages shows the latest JSON quickly
+      const url = "reveal.json?ts=" + Date.now();
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error("Unable to load reveal.json");
+      return await res.json();
+    }
+
+    function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
+
+    function render(data){
+      const level = clamp(Number(data.reveal_level ?? 0), 0, 6);
+      const progress = clamp(Number(data.progress_by_level?.[String(level)] ?? 12), 1, 100);
+
+      // Header / status
+      document.getElementById("caseId").textContent = data.case_id || "AHF-25-SARAH";
+      document.getElementById("dateWindow").textContent = data.date_window || "Aug 24 – Sep 3, 2026";
+      document.getElementById("dates").textContent = data.date_window || "Aug 24 – Sep 3, 2026";
+      document.getElementById("buildVersion").textContent = data.build_version || "v1.0";
+      document.getElementById("lastUpdated").textContent = data.last_updated || "—";
+      document.getElementById("progressFill").style.width = progress + "%";
+      document.getElementById("progressText").textContent = progress + "%";
+
+      // Regions / ops (progressively revealed)
+      document.getElementById("regions").textContent = (data.regions_by_level?.[String(level)] || "[REDACTED]");
+      document.getElementById("ops").textContent = (data.ops_by_level?.[String(level)] || "Recovery in progress…");
+
+      // Copy blocks
+      document.getElementById("headline").textContent = data.headline_by_level?.[String(level)] || "A 25th anniversary journey, partially recovered.";
+      document.getElementById("subline").textContent = data.subline_by_level?.[String(level)] || "Dates are stable. The rest is being gently restored as the system allows.";
+
+      // Badge logic
+      const statusBadge = document.getElementById("statusBadge");
+      const revealBadge = document.getElementById("revealBadge");
+      const integrity = document.getElementById("integrity");
+
+      if (level <= 1){
+        statusBadge.textContent = "DEGRADED";
+        statusBadge.className = "badge degraded";
+        revealBadge.textContent = "RECOVERY IN PROGRESS";
+        revealBadge.className = "badge recovering";
+        integrity.textContent = "degraded";
+      } else if (level <= 4){
+        statusBadge.textContent = "RECOVERING";
+        statusBadge.className = "badge recovering";
+        revealBadge.textContent = "PARTIAL RESTORATION";
+        revealBadge.className = "badge recovering";
+        integrity.textContent = "improving";
+      } else {
+        statusBadge.textContent = "STABLE";
+        statusBadge.className = "badge stable";
+        revealBadge.textContent = "STORY RESTORED";
+        revealBadge.className = "badge stable";
+        integrity.textContent = "stable";
+      }
+
+      // Teasers
+      const list = document.getElementById("teaserList");
+      list.innerHTML = "";
+      const teasers = data.teasers || [];
+      teasers.forEach((t, idx) => {
+        const key = String(level);
+        const text = (t.text_by_level && t.text_by_level[key]) ? t.text_by_level[key] : "[REDACTED]";
+        const tag = (t.tag_by_level && t.tag_by_level[key]) ? t.tag_by_level[key] : "data loss";
+        const div = document.createElement("div");
+        div.className = "teaser";
+        div.innerHTML = `
+          <div class="label">
+            <span>${t.title || ("Teaser " + (idx+1))}</span>
+            <span>${tag}</span>
+          </div>
+          <p class="text">${escapeHtml(text)}</p>
+        `;
+        list.appendChild(div);
+      });
+
+      // Romantic story text (optional per level)
+      if (data.story_by_level && data.story_by_level[String(level)]) {
+        document.getElementById("story").textContent = data.story_by_level[String(level)];
+      }
+
+      // Copy button: “Update Posted” text for your SMS (Option A)
+      const copyBtn = document.getElementById("copyBtn");
+      copyBtn.onclick = async () => {
+        const msg = (data.sms_copy_by_level?.[String(level)] || "📡 Briefing Portal Update: New information recovered.");
+        try{
+          await navigator.clipboard.writeText(msg);
+          toast("Copied update text.");
+        } catch(e){
+          toast("Couldn’t auto-copy. You can copy manually.");
+          alert(msg);
+        }
+      };
+    }
+
+    function escapeHtml(str){
+      return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    (async function init(){
+      try{
+        const data = await loadReveal();
+        render(data);
+      } catch(err){
+        console.error(err);
+        document.getElementById("headline").textContent = "Portal offline (temporary).";
+        document.getElementById("subline").textContent = "The surprise is still safe. Try again soon.";
+        document.getElementById("statusBadge").textContent = "OFFLINE";
+        document.getElementById("statusBadge").className = "badge degraded";
+      }
+    })();
+  </script>
+</body>
+</html>
