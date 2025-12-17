@@ -1,7 +1,7 @@
 {
-  "case_id": "AHF-25-SARAH",
+  "case_id": "ANNIV-25-SARAH",
   "build_version": "v1.0",
-  "date_window": "Aug 24 – Sep 3, 2026",
+  "date_window": "Aug 23 – Sep 3, 2026",
   "last_updated": "Dec 17, 2025",
   "reveal_level": 0,
 
@@ -17,15 +17,15 @@
 
   "story_by_level": {
     "0": "A small technical error occurred while assembling your surprise. Some details were lost in transit — not because they aren’t real, but because they’re arriving in phases. Check back occasionally. Each visit may recover a little more of the story.",
-    "3": "The system is recovering memories slowly — like a photo coming into focus. The most important part is already certain: we’re going together.",
+    "3": "The system is recovering memories slowly. The most important part is already certain: we’re going on an unforgettable adventure together.",
     "6": "Recovered: the story is real, and it’s yours. (The only remaining redaction is how excited I am.)"
   },
 
   "headline_by_level": {
-    "0": "A 25th anniversary journey, partially recovered.",
-    "2": "A 25th anniversary journey — details resurfacing.",
-    "4": "A 25th anniversary journey — the story is taking shape.",
-    "6": "A 25th anniversary journey — restored."
+    "0": "A 25th anniversary adventure, partially recovered.",
+    "2": "A 25th anniversary adventure — details resurfacing.",
+    "4": "A 25th anniversary adventure — the story is taking shape.",
+    "6": "A 25th anniversary adventure — restored."
   },
 
   "subline_by_level": {
