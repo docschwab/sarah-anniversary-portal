@@ -379,7 +379,7 @@
     function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
 
     function render(data){
-      const level = clamp(Number(data.reveal_level ?? 0), 0, 6);
+      const level = clamp(Number(data.reveal_level ?? 0), 0, 9);
       const progress = clamp(Number(data.progress_by_level?.[String(level)] ?? 12), 1, 100);
 
       // Header / status
