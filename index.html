@@ -342,6 +342,9 @@
         <div class="hint" id="romanticNote">
           <strong>Note:</strong> A small glitch occurred while assembling your surprise. Information will reappear as it’s recovered — one piece at a time. You must have a pretty incredible husband who went through all of these security measures to make sure you have an unforgettable 25th Anniversary adventure like this! I really wish I could share more of the details with you, but... protocol. You get it. 
         </div>
+        <div class="hint">
+          <strong>Next scheduled recovery:</strong> <span id="nextRecoveryText">—</span>
+        </div>
       </section>
 
       <aside class="card">
@@ -406,7 +409,7 @@
     }
 
     function render(data){
-      const level = clamp(Number(data.reveal_level ?? 0), 0, 9);
+      const level = computeEffectiveLevel(data, 9);
       const progress = clamp(Number(data.progress_by_level?.[String(level)] ?? 12), 1, 100);
 
       // Header / status
@@ -421,6 +424,14 @@
       // Regions / ops (progressively revealed)
       document.getElementById("regions").textContent = (data.regions_by_level?.[String(level)] || "[REDACTED]");
       document.getElementById("ops").textContent = (data.ops_by_level?.[String(level)] || "Recovery in progress…");
+
+      // Next scheduled recovery
+      const sched = data.reveal_schedule || {};
+      let nextISO = null;
+      for (let lvl = level + 1; lvl <= 9; lvl++) {
+        if (sched[String(lvl)]) { nextISO = sched[String(lvl)]; break; }
+      }
+      document.getElementById("nextRecoveryText").textContent = nextISO ? nextISO : "None (final level reached)";
 
       // Copy blocks
       document.getElementById("headline").textContent = data.headline_by_level?.[String(level)] || "A 25th anniversary adventure, partially recovered.";
