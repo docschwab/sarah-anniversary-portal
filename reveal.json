@@ -32,9 +32,7 @@
   },
 
   "story_by_level": {
-    "0": "A small technical error occurred while assembling your surprise.
-          Some details were lost in transit — not because they aren’t real, but because they’re arriving in phases.
-          Check back occasionally. Each visit may recover a little more of the story.",
+    "0": "A small technical error occurred while assembling your surprise. Some details were lost in transit — not because they aren’t real, but because they’re arriving in phases. Check back occasionally. Each visit may recover a little more of the story.",
     "1": "The system has recovered enough to know this: initial data loss was caused by excessive secrecy and holiday excitement.",
     "2": "The system has recovered enough to know this: additional information became available after promising not to spoil anything.",
     "3": "The system has recovered enough to know this: progress accelerated once curiosity reached critical levels.",
